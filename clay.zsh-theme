@@ -19,5 +19,5 @@ precmd() {
   psvar[1]=$(custom_git_info);
 }
 
-PROMPT="%{$fg_bold[green]%}%1v-%{$reset_color%} "
+PROMPT="%{$fg_bold[green]%}%1v%{$fg_bold[yellow]%}-%{$reset_color%} "
 
