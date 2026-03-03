@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,800;1,700&display=swap');
+
+/* FONTS */
+$barlow: 'Barlow', sans-serif;
+$font: $barlow;
+
+/* COLOR THEMES */
+$white:  #e0e0e0;
+$yellow: #ffdb00; 
+$royal:  #0058a3;
+$royal-offset: #0060b3;
+$primary-color: $yellow;
+$secondary-color: $royal;
+$blue: #4ec7d0;
+$alternative: $white;
+
+.revision {
+  bottom:0;
+  padding-bottom: 10px;
+  position: fixed;
+  font-size: 14px;
+}
+
+.blue {
+  color: $blue;
+}
+
+h2 {
+  font-weight: 800;
+  color: $alternative;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: $alternative;
+  margin: 0;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+body {
+  font-family: $font !important;
+  background-color: $secondary-color;
+  font: 24px "Century Gothic", Futura, sans-serif;
+  margin: 25px;
+  color: $primary-color;
+}
+
+hint {
+  opacity: 0.8;
+}
+
+.container {
+  text-align: center;
+  padding: 30% 0% 30% 0%;
+}
+
+.fa-link {
+  color: $primary-color;
+  text-decoration: 'none';
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 36px;
+}
+
+.fa-link:hover {
+  color: $white;
+}
+
+h1 {
+  padding: 0rem;
+  font-size: 5rem;
+  margin: 0rem;
+}
+
+h2 {
+  padding-bottom: 0rem;
+  margin-bottom: 0rem;
+}
+
+.clicked {
+  background-color: $blue !important;
+  border-color: $blue !important;
+  padding-right: 25px !important;
+  padding-left: 25px !important;
+  color: $secondary-color !important;
+  font-weight: bold;
+}
+
+.fadeOut{
+  opacity:0;
+  width:0;
+  height:0;
+  transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+}
+.fadeIn{
+  opacity:1;
+  width:100px;
+  height:100px;
+  transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
+}
+
+.homepage {
+  min-height: 100vh;
+}
+
+.btn-primary {
+  padding: 0.25rem 2rem 0.25rem 2rem;
+  text-decoration: none;
+  border: 2px solid $primary-color;
+  border-radius: 0.5rem;
+  color: $primary-color;
+}
+
+.btn-primary:hover {
+  background-color: $royal-offset;
+}
+
+.bdg-primary {
+  font-size: 20px;
+  margin: 0.25rem;
+  background-color: $primary-color;
+  border-radius: 0rem;
+  border-color: black;
+  padding: 0rem 1rem 0rem 1rem;
+  color: black;
+  transition: all 0.5s;
+}
+
+.bdg-primary:hover {
+  background-color: $alternative;
+  border-color: $alternative;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.bdg-primary:active { 
+  border-style: outset;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.progress {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 42px;
+  height: 30px;
+  font-weight: bold;
+}
+
+.progress-bar {
+  color: $secondary-color;
+  padding-left: 0.25rem;
+  background-color: $alternative;
+  text-align: left;
+}
+
+.jumbotron {
+  border-color: $alternative;
+  padding: 1rem 1rem 1rem 1rem;
+  margin-bottom: 0rem;
+  background-color: inherit;
+  border-width: 5rem;
+}
+
+hr {
+  border-color: $alternative; 
+}
+
+.sidebar {
+  width: 100px;
+}
+
+.resume-btn {
+  background-color: $alternative;
+  border-radius: 1rem;
+}
+
+.resume-btn:hover {
+  background-color: $secondary-color;
+  border-color: $alternative;
+  color: $alternative;
+}
+
+/* SPOTIFY PAGE */
+.p-5 {
+  padding: 5%;
+}
+
+.album-art {
+  width: 100%;
+  transition: 0.75s;
+}
+
+.album {
+  @media screen and (max-width: 725px) {
+    width:33%;
+  }
+  transition: 0.75s;
+}
+
+.album:hover {
+  background-color:$yellow;
+  .album-art {
+    width: 95%;
+  }
+}
+
+.heading1 {
+  border-radius: 0.5rem;
+  margin-top: 20px;
+  background-color: $yellow;
+  padding: 2px 10px 10px;
+  margin-left: -40px;
+  text-align: right;
+  @media screen and (max-width: 755px) {
+    width: 80%;
+  }
+  @media screen and (min-width: 755px) {
+    width: 40%;
+  }
+  h2 {
+    color: $royal;
+  }
+}
+
+.left-exposed {
+  margin-top: 20px;
+  background-color: $primary-color;
+  border-radius: 0.5rem;
+  margin-left: -40px;
+  text-align: right;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  
+  p {
+    color: $royal;
+    a {
+      margin-left: 10px;
+    }
+  }
+  @media screen and (max-width: 1120px) {
+    width:100%;
+  }
+  @media screen and (min-width: 1120px) {
+    width: 60%;
+  } 
+}
+
+/* LETTERBOX page */
+.review {
+  border: 2px white solid;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  .reviewText {
+    display: none;
+    opacity: 0;
+  }
+}
+
+.review:hover {
+  border-color: $yellow;
+  .reviewText {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.ul-title {
+  color: $yellow;
+  text-decoration: underline white;
+  text-decoration-thickness: 3px;
+  font-style: italic;
+  margin-right: 0.5rem;
+}
+
+.mdate {
+  font-size: 18px;
+  color: white;
+}
+
+blockquote {
+  font-style: italic;
+  border-left: 4px white solid;
+  margin: 2rem 1rem 2rem 1rem;
+  padding-left: 2rem;
+  color: white;
+}
+
+select {
+  font-family: $barlow;
+  font-size: inherit;
+  text-decoration: underline $alternative 0.2rem;
+  // text-decoration-color: $alternative;
+  margin-left: 0.25rem;
+  background-color: inherit;
+  border-radius: 0.5rem;
+  color: $yellow;
+  border: $alternative 0.0rem solid;
+}
