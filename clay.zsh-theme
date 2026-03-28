@@ -3,6 +3,10 @@
 # ln -s "$(pwd)/clay.zsh-theme" ~/.oh-my-zsh/themes/clay.zsh-theme
 # omz theme use clay
 
+# Color options (ANSI 8): red, blue, magenta, green, yellow, black, cyan, white
+_GIT_COLOR=green
+_DASH_COLOR=blue
+_ERROR_COLOR=red
 # Show git branch if in a Git repo
 function custom_git_info() {
   if ! __git_prompt_git rev-parse --git-dir &> /dev/null \
@@ -10,11 +14,11 @@ function custom_git_info() {
     echo ""
     return
   fi
-  echo "%{$fg_bold[blue]%}$(git_current_branch)%{$reset_color%}"
+  echo "%{$fg_bold[$_GIT_COLOR]%}$(git_current_branch)%{$reset_color%}"
 }
 
 # Main prompt: just a dash, nothing more
-PROMPT="%{$fg_bold[green]%}-%{$reset_color%} "
+PROMPT="%{$fg_bold[$_DASH_COLOR]%}-%{$reset_color%} "
 
 # Git info to be shown in the next prompt only (after cd)
 _next_git_rprompt=""
@@ -30,7 +34,7 @@ function update_rprompt() {
 
   RPROMPT=""
   if [[ $status_ -ne 0 ]]; then
-    RPROMPT+="%{$fg[red]%}$status_ ↵%{$reset_color%} "
+    RPROMPT+="%{$fg[$_ERROR_COLOR]%}$status_ ↵%{$reset_color%} "
   fi
 
   # Add Git info only if we just changed directories
